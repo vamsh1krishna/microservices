@@ -39,7 +39,7 @@ def create_recipe():
     recipes.append(recipe)
     return jsonify(recipe), HTTPStatus.CREATED
 
-@app.route('/recipies/<int:recipe_id>',methods=['PUT'])
+@app.route('/recipes/<int:recipe_id>',methods=['PUT'])
 def update_recipe(recipe_id):
     """
     This method will update the recipe if found
@@ -77,4 +77,4 @@ def delete_recipe(recipe_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8081, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
